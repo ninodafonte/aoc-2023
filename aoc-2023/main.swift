@@ -8,5 +8,5 @@
 import Foundation
 import aoc_2023_Framework
 
-print(day1Part1(dataFile: "day1.txt"))
+print(day1Part2(dataFile: "day1Part2.txt"))
 
