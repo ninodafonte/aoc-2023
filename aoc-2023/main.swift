@@ -8,5 +8,7 @@
 import Foundation
 import aoc_2023_Framework
 
-print(day1Part2(dataFile: "day1Part2.txt"))
+// Day 1:
+// print("Day1, part 1: " + String(day1Part1(dataFile: "day1Part1.txt")))
+// print("Day1, part 2: " + String(day1Part2(dataFile: "day1Part2.txt")))
 

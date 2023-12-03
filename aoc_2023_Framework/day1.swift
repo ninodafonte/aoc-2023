@@ -7,6 +7,16 @@
 
 import Foundation
 
+extension String {
+    func ranges(of substring: String, options: CompareOptions = [], locale: Locale? = nil) -> [Range<Index>] {
+        var ranges: [Range<Index>] = []
+        while let range = range(of: substring, options: options, range: (ranges.last?.upperBound ?? self.startIndex)..<self.endIndex, locale: locale) {
+            ranges.append(range)
+        }
+        return ranges
+    }
+}
+
 func day1Part1(dataFile: String) -> Int {
     let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     let aocDataURL = documentsURL.appendingPathComponent("aoc2023")
@@ -42,7 +52,7 @@ func day1Part2(dataFile: String) -> Int {
         let data = try Data(contentsOf: day1URL)
         if let contents = String(data: data, encoding: .utf8) {
             let lines = contents.split(separator:"\n")
-            for line in lines {
+            for line in lines {                
                 let lineTranslated = convertToInts(line: String(line))
                 let intsOnly = lineTranslated.components(separatedBy: CharacterSet.decimalDigits.inverted).filter({ $0 != ""}).joined().split(separator: "")
                 let firstInt = intsOnly.first ?? ""
@@ -60,24 +70,21 @@ func day1Part2(dataFile: String) -> Int {
 
 func convertToInts(line: String) -> String {
     let numbersInText = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    
     var translation: [Int: String] = [:]
     
     for numberInText in numbersInText {
-        // TODO: handle multiple repeated numbers
-        if let range: Range<String.Index> = line.range(of: numberInText) {            
-            let index = line.distance(from: line.startIndex, to: range.lowerBound)
-            translation[index] = numberInText
+        let occurences = line.ranges(of: numberInText)
+        for wordIndex in occurences {
+            let distanceIndex = line.distance(from: line.startIndex, to: wordIndex.lowerBound)
+            translation[distanceIndex] = numberInText
         }
     }
         
     var lineTranslated = line
-    print(line)
     for (index, text) in translation {
         let numIndex = numbersInText.firstIndex(of: text)!
         lineTranslated = replace(myString: lineTranslated, index, numIndex)
     }
-    print(lineTranslated)
     
     return lineTranslated
 }
