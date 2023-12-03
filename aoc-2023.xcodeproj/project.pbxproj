@@ -11,7 +11,9 @@
 		F14C19682B1A462A00B40A50 /* aoc_2023_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14C19602B1A462A00B40A50 /* aoc_2023_Framework.framework */; };
 		F14C196D2B1A462A00B40A50 /* aoc_2023_FrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14C196C2B1A462A00B40A50 /* aoc_2023_FrameworkTests.swift */; };
 		F14C196E2B1A462A00B40A50 /* aoc_2023_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = F14C19622B1A462A00B40A50 /* aoc_2023_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F14C19762B1A477700B40A50 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14C19752B1A477700B40A50 /* utils.swift */; };
+		F181ADD32B1C6CDF00A51497 /* day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181ADD22B1C6CDF00A51497 /* day1.swift */; };
+		F181ADD42B1C6CDF00A51497 /* day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181ADD22B1C6CDF00A51497 /* day1.swift */; };
+		F181ADD52B1C6CDF00A51497 /* day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181ADD22B1C6CDF00A51497 /* day1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 		F14C19622B1A462A00B40A50 /* aoc_2023_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aoc_2023_Framework.h; sourceTree = "<group>"; };
 		F14C19672B1A462A00B40A50 /* aoc_2023_FrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aoc_2023_FrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14C196C2B1A462A00B40A50 /* aoc_2023_FrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_2023_FrameworkTests.swift; sourceTree = "<group>"; };
-		F14C19752B1A477700B40A50 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		F181ADD22B1C6CDF00A51497 /* day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F14C19622B1A462A00B40A50 /* aoc_2023_Framework.h */,
-				F14C19752B1A477700B40A50 /* utils.swift */,
+				F181ADD22B1C6CDF00A51497 /* day1.swift */,
 			);
 			path = aoc_2023_Framework;
 			sourceTree = "<group>";
@@ -256,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F181ADD32B1C6CDF00A51497 /* day1.swift in Sources */,
 				F14C19552B1A451400B40A50 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14C19762B1A477700B40A50 /* utils.swift in Sources */,
+				F181ADD42B1C6CDF00A51497 /* day1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14C196D2B1A462A00B40A50 /* aoc_2023_FrameworkTests.swift in Sources */,
+				F181ADD52B1C6CDF00A51497 /* day1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

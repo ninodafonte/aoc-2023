@@ -8,6 +8,5 @@
 import Foundation
 import aoc_2023_Framework
 
-print(isPalindrome("Hello, World!"))
-
+print(day1Part1(dataFile: "day1.txt"))
 
