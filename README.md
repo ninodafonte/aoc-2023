@@ -55,9 +55,32 @@ Very similar to part 1 but with some additions:
 
 - Now I just apply the same process than in part 1 getting rid of the non-integers and it's done.
 
-Day 1 code can be found in [here](/aoc_2023_Framework/day1.swift)
+Day 1 code can be found in [here](/Sources/Day01.swift)
 
+## Day 2 Part 1
 
+Mr. David Olivé brought to my attention the existance of a template created by Apple to run the Advent of Code in an easier way so I downloaded it and apply it to this next day. It works great and simplify a lot of operations.
+
+In my (very short) experience with Swift, it looks like instead of creating a framework (to be able to host code and tests in the same place), it's build as a package, so it's way simpler to run and try things in XCode and in the console. New learnings!
+
+Coming back to this second day, the learnings are around using RegExs and maps in Swift. Using a map, I iterate each game, taking the game number and analyzing each one of the rounds. I start with a "drop" flag to false and check each color. If any color in any round goes out of the MAX number for that color, I "drop" the game.
+
+Then, running a reduce with the array of valid games (the numbers of the valid games), done ✅
+    
+## Day 2 Part 2
+
+Nothing very difficult once the part 1 was done.
+
+- Initialize a min red, blue and green to 1 (as we are using powers, that doesn't create any differences, 0 is dead)
+- Using the same regexs to check each one of the rounds and colors but this time just running a max function to see if the current color in that round is greater than the last one. If it's the case, we save it. 
+- Return the updated values for min colors
+- Reduce the array with the powers of colors in each game
+
+Day 2 code can be found in [here](/Sources/Day02.swift)
+
+----------------------------------------------------------------
+Notes from the original template as reference 
+---------------------------------------------------
 # Advent of Code Swift Starter Project
 
 [![Language](https://img.shields.io/badge/language-Swift-red.svg)](https://swift.org)
