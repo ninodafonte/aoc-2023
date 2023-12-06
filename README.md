@@ -6,6 +6,13 @@ I know it's going to be tricky but all that matters is the learning part so, no 
 
 I'll be updating this README file with my learning during these days.
 
+# Table of Contents
+1. [Preliminary work and learnings](#preliminary-work-and-learnings)
+2. [Day 1](#day-1-part-1)
+3. [Day 2](#day-2-part-1)
+4. [Day 3](#day-3-part-1)
+5. [Day 4](#day-4-part-1)
+
 ## Preliminary work and learnings
 
 Usually, with the first challenge you need to write some common code to load data from a file in the filesystem, and perform a bunch of string operations on each one of the lines, at least that's the deal with most of the challenges.
@@ -93,6 +100,29 @@ I got a bit desperate trying to solve this one. Probably not my best day. Nevert
 - Finally, easy, filter only the ones with a count of 2 (two numbers linked to the gear), map to multiply and reduce to sum it up.
 
 Day 3 code can be found in [here](/Sources/Day03.swift)
+
+## Day 4 Part 1
+
+Once I fought with RegEx and parsing data in previous days, this one was extremely easy.
+
+- RegEx the hell of it to get the winning numbers and my numbers.
+- Intersect the arrays and use power of 2 to get the points and add it to the total
+     
+## Day 4 Part 2
+
+A bit more tricky this time. Extending the previous solution with a caveat:
+
+- For each line, count the points and add the copies of the cloned scratchpads to a new array.
+- Also, in every iteration after the first one, take into account not only the points from the original but also the ones of the cloned ones (in the clone array I inserted the index of the card so I can "remember" what are the source of the cloned scratchpads)
+- Count the cloned ones at the end and add the original ones.
+
+The execution was quite intense for this part 2. That led me to see the difference between executing the build in debug mode or in release mode. Quite a difference in performance. To take into account in future days with more constraints.
+
+Example of performance:
+
+![Example of performance Day 4](/docs/day4-benchmark.png)
+
+Day 4 code can be found in [here](/Sources/Day04.swift)
 
 ----------------------------------------------------------------
 Notes from the original template as reference 
