@@ -78,6 +78,22 @@ Nothing very difficult once the part 1 was done.
 
 Day 2 code can be found in [here](/Sources/Day02.swift)
 
+## Day 3 Part 1
+
+Started very well trying a (probably) different idea than usual to solve it. I've created an overlay with the blast radius of the symbols (sort of minesweeper effect) so, once I start iterating over the main matrix to get the numbers, I just need to check if the same coordinate is in the overlay with the blast radius. I liked it and it worked, although the code is very rough (meaning BAD) in terms of finding adjacent elements.
+    
+## Day 3 Part 2
+
+I got a bit desperate trying to solve this one. Probably not my best day. Nevertheless, at the end it worked well. I've cleaned up the code a bit (using an adjacent matrix to make it easy) and following simple steps:
+
+- Iterate the main matrix
+- If I find a number, I check if it's adjacent to an *. 
+- If it is, I save the position of the star and the number in a dictionary.
+- I keep adding the numbers to the right key in the dictionary so at the end I have a coord of a "gear" as the key and the numbers linked to it as values.
+- Finally, easy, filter only the ones with a count of 2 (two numbers linked to the gear), map to multiply and reduce to sum it up.
+
+Day 3 code can be found in [here](/Sources/Day03.swift)
+
 ----------------------------------------------------------------
 Notes from the original template as reference 
 ---------------------------------------------------
