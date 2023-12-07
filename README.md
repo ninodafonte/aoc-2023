@@ -12,6 +12,7 @@ I'll be updating this README file with my learning during these days.
 3. [Day 2](#day-2-part-1)
 4. [Day 3](#day-3-part-1)
 5. [Day 4](#day-4-part-1)
+5. [Day 5](#day-5-part-1)
 
 ## Preliminary work and learnings
 
@@ -124,7 +125,27 @@ Example of performance:
 
 Day 4 code can be found in [here](/Sources/Day04.swift)
 
+## Day 5 Part 1
+
+To make it a bit more interesting I decided to create a mini-state-machine inside the iterator to parse the data.
+
+After everything was in their arrays, it was easy to apply the transformation as a pipeline in all the jumps until reaching the location coordinates. Then getting the min of the array and solved.
+     
+## Day 5 Part 2
+
+The main difference here was to find a clever way to process the ranges. I didn't 🤷‍♂️.
+Tried the brute-force procedure (removing the duplicates at least with the standard Array(Set(Array))) and it took a while, but it got the job done. 
+
+Example of performance:
+
+![Example of performance Day 5](/docs/day5-benchmark.png)
+
+Day 5 code can be found in [here](/Sources/Day05.swift)
+
+
 ----------------------------------------------------------------
+
+
 Notes from the original template as reference 
 ---------------------------------------------------
 # Advent of Code Swift Starter Project
