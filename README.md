@@ -13,6 +13,7 @@ I'll be updating this README file with my learning during these days.
 4. [Day 3](#day-3-part-1)
 5. [Day 4](#day-4-part-1)
 5. [Day 5](#day-5-part-1)
+5. [Day 6](#day-6-part-1)
 
 ## Preliminary work and learnings
 
@@ -141,6 +142,29 @@ Example of performance:
 ![Example of performance Day 5](/docs/day5-benchmark.png)
 
 Day 5 code can be found in [here](/Sources/Day05.swift)
+
+## Day 6 Part 1
+
+Quite basic puzzle (or I was having a good day!). A bit of parsing to get the times and the distances. Then creating a function to calculate the options, this one:
+
+    func calculateOptions(seconds: Int, distanceToBeat: Int) -> Int {
+        var validOptions = 0
+        for i in 1...seconds {
+            let option = i * (seconds - i)
+            if (option > distanceToBeat) { validOptions += 1 }
+        }
+        
+        return validOptions
+    }
+    
+And that was it.
+     
+## Day 6 Part 2
+
+Easy one, just had to tweak the two lines to parse the lines at the beginning and the rest was exactly the same.
+
+Day 6 code can be found in [here](/Sources/Day06.swift)
+
 
 
 ----------------------------------------------------------------
